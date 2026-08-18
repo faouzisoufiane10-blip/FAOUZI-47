@@ -4,6 +4,16 @@ This README is bilingual: English followed by Arabic sections for each topic.
 
 ---
 
+## Live demo / معاينة مباشرة
+
+You can view the live demo of the template here:
+https://faouzi-47.netlify.app
+
+يمكنك معاينة القالب مباشرة هنا:
+https://faouzi-47.netlify.app
+
+---
+
 ## English — Quick Start
 
 Welcome to the FAOUZI-47 customizable template. Use this repo to fork and build your own SOC dashboard with API rotation support, vector search, and a map-driven interface.

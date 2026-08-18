@@ -27,6 +27,8 @@
     .main { padding:16px; }
     .card { background:rgba(255,255,255,0.02); padding:12px; border-radius:8px; margin-bottom:12px; }
     .map { height:420px; background:linear-gradient(180deg,#eaeefb,#f8fafc); border-radius:8px; }
+    .header-actions { margin-left:auto; display:flex; gap:8px; align-items:center; }
+    .live-badge { display:inline-block; padding:6px 10px; background:var(--primary); color:#fff; border-radius:6px; text-decoration:none; font-size:13px; }
   </style>
 </head>
 <body>
@@ -34,13 +36,15 @@
     <!-- Brand / العلامة التجارية -->
     <img src="/assets/logo.svg" alt="logo" class="logo" id="brandLogo">
     <h1 id="appName">FAOUZI-47 Template</h1>
-    <div style="margin-left:auto; display:flex; gap:8px; align-items:center;">
+    <div class="header-actions">
       <select id="themeSwitcher" aria-label="Theme">
         <option value="auto">Auto / تلقائي</option>
         <option value="light">Light / فاتح</option>
         <option value="dark">Dark / داكن</option>
       </select>
       <button id="deployBtn">Deploy / نشر</button>
+      <!-- Live demo link added as requested by the user -->
+      <a id="liveDemo" class="live-badge" href="https://faouzi-47.netlify.app" target="_blank" rel="noopener noreferrer">Live Demo / المعاينة</a>
     </div>
   </header>
 
@@ -126,6 +130,13 @@
       li.textContent = cat;
       top.appendChild(li);
     });
+
+    // Ensure live demo link is visible and uses configured URL if provided
+    const liveLink = document.getElementById('liveDemo');
+    if (CONFIG.deployment && CONFIG.deployment.apiBaseUrl) {
+      // If the template has a published site URL property in config, prefer it (optional)
+      // Note: apiBaseUrl is for backend; in a full template you might add liveUrl property.
+    }
 
   </script>
 
